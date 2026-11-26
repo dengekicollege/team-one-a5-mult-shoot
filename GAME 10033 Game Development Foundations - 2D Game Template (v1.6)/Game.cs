@@ -13,9 +13,11 @@ namespace MohawkGame2D
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
+        
+        Enemies test = new Enemies();
         public void Setup()
         {
-
+            test.SetUp();
         }
 
         /// <summary>
@@ -23,7 +25,8 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-
+            test.movment();
+            test.eSprite();
         }
     }
 
