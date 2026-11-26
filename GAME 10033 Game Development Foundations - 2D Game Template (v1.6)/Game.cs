@@ -28,6 +28,26 @@ namespace MohawkGame2D
         {
 
         }
+
+        void P1ScoreChangeByInt(int amount)
+        {
+            player1Score += amount;
+        }
+
+        void P1ScoreChangeByPercentage(int amount)
+        {
+            player1Score += player1Score * (amount / 100);
+        }
+
+        void P2ScoreChangeByInt(int amount)
+        {
+            player2Score += amount;
+        }
+
+        void P2ScoreChangeByPercentage(int amount)
+        {
+            player2Score += player2Score * (amount / 100); 
+        }
     }
 
 }
