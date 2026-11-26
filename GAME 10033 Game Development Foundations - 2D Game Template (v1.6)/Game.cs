@@ -18,6 +18,7 @@ namespace MohawkGame2D
         public void Setup()
         {
             test.SetUp();
+            Window.SetSize(400, 400);
         }
 
         /// <summary>
@@ -25,6 +26,7 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
+            Window.ClearBackground(5);
             test.movment();
             test.eSprite();
         }
