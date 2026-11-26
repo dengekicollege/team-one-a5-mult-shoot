@@ -1,7 +1,6 @@
-﻿// Include the namespaces (code libraries) you need below.
-using System;
+﻿using System;
 using System.Numerics;
-
+using System.IO;
 // The namespace your code is in.
 namespace MohawkGame2D
 {
@@ -13,9 +12,18 @@ namespace MohawkGame2D
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
+
+        Player player1 = new Player();
+        Player player2 = new Player();
         public void Setup()
         {
+            Window.SetSize(1024, 1024);
 
+            Window.SetTitle("Mult Shoot");
+
+            player1.Setup(KeyboardKey.S, KeyboardKey.W, KeyboardKey.D, KeyboardKey.A, Color.Red);
+
+            player2.Setup(KeyboardKey.Down, KeyboardKey.Up, KeyboardKey.Right, KeyboardKey.Left, Color.Blue);
         }
 
         /// <summary>
@@ -23,7 +31,11 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
+            Window.ClearBackground(Color.Green);
 
+            player1.Update();
+
+            player2.Update();
         }
     }
 
