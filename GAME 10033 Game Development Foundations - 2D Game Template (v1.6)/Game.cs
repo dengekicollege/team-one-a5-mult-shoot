@@ -10,6 +10,9 @@ namespace MohawkGame2D
     /// </summary>
     public class Game
     {
+        public int player1Score = 0;
+
+        public int player2Score = 0;
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
